@@ -3,6 +3,7 @@
 
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QList> // Добавляем для хранения списка сокетов
 #include "requesthandler.h" // Подключаем класс RequestHandler
 
 class MyTcpServer : public QObject
@@ -18,12 +19,9 @@ private slots:
     void slotClientDisconnected();
 
 private:
-    QTcpServer* mTcpServer;
-    QTcpSocket* mTcpSocket;
+    QTcpServer* mTcpServer; // Сервер
+    QList<QTcpSocket*> mTcpSockets; // Список активных сокетов
     RequestHandler requestHandler; // Объект для обработки запросов
 };
 
 #endif // MYTCPSERVER_H
-
-
-

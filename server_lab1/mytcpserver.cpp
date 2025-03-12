@@ -6,6 +6,11 @@
 MyTcpServer::~MyTcpServer()
 {
     mTcpServer->close();
+    // Закрываем все сокеты
+    for (QTcpSocket* socket : mTcpSockets) {
+        socket->close();
+        socket->deleteLater();
+    }
 }
 
 MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent){
@@ -22,15 +27,28 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent){
 }
 
 void MyTcpServer::slotNewConnection(){
-    mTcpSocket = mTcpServer->nextPendingConnection();
-    mTcpSocket->write("Hello, World!!! I am equation solver server!\r\n");
-    connect(mTcpSocket, &QTcpSocket::readyRead, this, &MyTcpServer::slotServerRead);
-    connect(mTcpSocket, &QTcpSocket::disconnected, this, &MyTcpServer::slotClientDisconnected);
+    // Получаем сокет для нового подключения
+    QTcpSocket* socket = mTcpServer->nextPendingConnection();
+    mTcpSockets.append(socket); // Добавляем сокет в список
+
+    // Отправляем приветственное сообщение
+    socket->write("Hello, World!!! I am equation solver server!\r\n");
+
+    // Подключаем сигналы для нового сокета
+    connect(socket, &QTcpSocket::readyRead, this, &MyTcpServer::slotServerRead);
+    connect(socket, &QTcpSocket::disconnected, this, &MyTcpServer::slotClientDisconnected);
+
+    qDebug() << "New client connected. Total clients:" << mTcpSockets.size();
 }
 
 void MyTcpServer::slotServerRead(){
-    while (mTcpSocket->canReadLine()) { // Читаем данные построчно
-        QByteArray array = mTcpSocket->readLine(); // Читаем одну строку
+    QTcpSocket* socket = qobject_cast<QTcpSocket*>(sender());
+    if (!socket) {
+        qDebug() << "Invalid socket";
+        return;
+    }
+    while (socket->canReadLine()) { // Читаем данные построчно
+        QByteArray array = socket->readLine(); // Читаем одну строку
         QString request = QString::fromUtf8(array).trimmed(); // Убираем лишние пробелы и символы новой строки
 
         qDebug() << "Received data:" << request;
@@ -45,12 +63,25 @@ void MyTcpServer::slotServerRead(){
         QString response = requestHandler.handleRequest(request);
 
         // Отправляем ответ клиенту
-        mTcpSocket->write(response.toUtf8());
-        qDebug() << "Sent response:" << response;
+        socket->write(response.toUtf8());
+        qDebug() << "Sent response to client:" << response;
     }
 }
 
 void MyTcpServer::slotClientDisconnected(){
-    qDebug() << "Client disconnected";
-    mTcpSocket->close();
+    // Определяем, какой сокет отключился
+    QTcpSocket* socket = qobject_cast<QTcpSocket*>(sender());
+    if (!socket) {
+        qDebug() << "Invalid socket";
+        return;
+    }
+
+    // Удаляем сокет из списка
+    mTcpSockets.removeOne(socket);
+
+    // Закрываем и удаляем сокет
+    socket->close();
+    socket->deleteLater();
+
+    qDebug() << "Client disconnected. Total clients:" << mTcpSockets.size();
 }
