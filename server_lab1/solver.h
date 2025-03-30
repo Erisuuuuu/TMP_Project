@@ -1,10 +1,10 @@
 #ifndef SOLVER_H
 #define SOLVER_H
-
+#include <QString>
 class Solver
 {
 public:
-    int solver();
+    static QString solver();
 
 };
 

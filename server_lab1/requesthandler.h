@@ -13,7 +13,7 @@ public:
 private:
     QString handleRegister(const QStringList& parts); // Заглушка для регистрации
     QString handleLogin(const QStringList& parts);    // Заглушка для авторизации
-    QString handleSolve(const QStringList& parts);    // Заглушка для решения уравнений
+    QString handleSolve(const QString& expression);    // Заглушка для решения уравнений
 };
 
 #endif // REQUEST_HANDLER_H

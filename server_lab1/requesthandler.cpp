@@ -12,7 +12,7 @@ QString RequestHandler::handleRequest(const QString& request) {
         return handleLogin(parts); // Обработка авторизации
     }
     else if (parts.size() >= 3 && parts[0] == "SOLVE") {
-        return handleSolve(parts); // Обработка решения уравнений
+        return handleSolve(request); // Обработка решения уравнений
     }
     else {
         return "Invalid command\r\n"; // Неверная команда
@@ -31,7 +31,12 @@ QString RequestHandler::handleLogin(const QStringList& parts) {
     return "User logged in (stub): " + username + "\r\n";
 }
 
+// QString RequestHandler::handleSolve(const QString& expression) {
+//     return Solver::solver()+"\r\n";
+// }
 QString RequestHandler::handleSolve(const QString& expression) {
-    Solver::solver();
-    return "System solved (stub):\r\n";
+    // int boolka = Solver::solver();//debug
+    QString debug;
+    debug = Solver::solver();
+    return debug;
 }
