@@ -1,5 +1,5 @@
 #include "requesthandler.h"
-
+#include "solver.h"
 RequestHandler::RequestHandler() {}
 
 QString RequestHandler::handleRequest(const QString& request) {
@@ -11,8 +11,8 @@ QString RequestHandler::handleRequest(const QString& request) {
     else if (parts.size() >= 3 && parts[0] == "LOGIN") {
         return handleLogin(parts); // Обработка авторизации
     }
-    else if (parts.size() >= 3 && parts[0] == "SOLVE") {
-        return handleSolve(parts); // Обработка решения уравнений
+    else if (parts.size() >= 2 && parts[0] == "SOLVE") {
+        return handleSolve(request); // Обработка решения уравнений
     }
     else {
         return "Invalid command\r\n"; // Неверная команда
@@ -31,8 +31,13 @@ QString RequestHandler::handleLogin(const QStringList& parts) {
     return "User logged in (stub): " + username + "\r\n";
 }
 
-QString RequestHandler::handleSolve(const QStringList& parts) {
-    QString equation1 = parts[1];
-    QString equation2 = parts[2];
-    return "System solved (stub):\r\n" + equation1 + "\r\n" + equation2 + "\r\n";
+// QString RequestHandler::handleSolve(const QString& expression) {
+//     return Solver::solver()+"\r\n";
+// }
+QString RequestHandler::handleSolve(const QString& expression) {
+    // int boolka = Solver::solver();//debug
+    // QString debug;
+    // debug = Solver::solver();
+    // return debug;
+    return Solver::solver();
 }
