@@ -35,9 +35,11 @@ QString RequestHandler::handleLogin(const QStringList& parts) {
 //     return Solver::solver()+"\r\n";
 // }
 QString RequestHandler::handleSolve(const QString& expression) {
-    // int boolka = Solver::solver();//debug
-    // QString debug;
-    // debug = Solver::solver();
-    // return debug;
-    return Solver::solver();
+// должен обрабатывать expresson но нет пока
+QStringList debug;
+debug << "2x + 3y = 5"
+          << "4a - 2b + 6c = 10"
+          << "5x - 7y + 8z = -3";
+
+    return Solver::solver(debug);
 }

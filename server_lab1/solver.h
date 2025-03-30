@@ -4,7 +4,7 @@
 class Solver
 {
 public:
-    static QString solver();
+    static QString solver(const QStringList &equations);
 
 };
 
