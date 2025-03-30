@@ -459,6 +459,7 @@ Makefile: ../../echoServer.pro E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/w
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/qt_config.prf \
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/win32-g++/qmake.conf \
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/exclusive_builds.prf \
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/toolchain.prf \
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/default_pre.prf \
@@ -488,7 +489,6 @@ Makefile: ../../echoServer.pro E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/w
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/plugins/tls/qschannelbackend.prl \
 		E:/Apps/MS/mingw64/qt6-static/lib/Qt6Network.prl \
 		E:/Apps/MS/mingw64/qt6-static/lib/Qt6Core.prl \
-		.qmake.stash \
 		E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\..\echoServer.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/spec_pre.prf:
@@ -880,6 +880,7 @@ E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/qt_functions.prf:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/qt_config.prf:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/win32-g++/qmake.conf:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/spec_post.prf:
+.qmake.stash:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/exclusive_builds.prf:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/toolchain.prf:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/default_pre.prf:
@@ -909,7 +910,6 @@ E:/Apps/MS/mingw64/qt6-static/share/qt6/plugins/tls/qopensslbackend.prl:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/plugins/tls/qschannelbackend.prl:
 E:/Apps/MS/mingw64/qt6-static/lib/Qt6Network.prl:
 E:/Apps/MS/mingw64/qt6-static/lib/Qt6Core.prl:
-.qmake.stash:
 E:/Apps/MS/mingw64/qt6-static/share/qt6/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\echoServer.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

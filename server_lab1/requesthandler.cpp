@@ -1,5 +1,5 @@
 #include "requesthandler.h"
-
+#include "solver.h"
 RequestHandler::RequestHandler() {}
 
 QString RequestHandler::handleRequest(const QString& request) {
@@ -31,8 +31,7 @@ QString RequestHandler::handleLogin(const QStringList& parts) {
     return "User logged in (stub): " + username + "\r\n";
 }
 
-QString RequestHandler::handleSolve(const QStringList& parts) {
-    QString equation1 = parts[1];
-    QString equation2 = parts[2];
-    return "System solved (stub):\r\n" + equation1 + "\r\n" + equation2 + "\r\n";
+QString RequestHandler::handleSolve(const QString& expression) {
+    Solver::solver();
+    return "System solved (stub):\r\n";
 }
