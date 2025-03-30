@@ -26,20 +26,22 @@
 QString Solver::solver() {
     QString equation = "2x + 3y+52z + 2x= 5.0";
 
-    // Для хранения коэффициентов переменных: ключ – символ переменной, значение – суммарный коэффициент.
     QMap<QChar, double> varCoeffs;
-    // Для хранения свободного члена (правой части уравнения).
     double constantTerm = 0.0;
 
+    QString response; // Переменная для хранения результата
+
     if (EquationParser::parseLinearEquation(equation, varCoeffs, constantTerm)) {
-        qDebug() << "Коэффициенты переменных:";
+        response += "Коэффициенты переменных:\r\n";
         for (auto it = varCoeffs.constBegin(); it != varCoeffs.constEnd(); ++it) {
-            qDebug() << it.key() << ":" << it.value();
+            response += QString("%1 : %2\r\n").arg(it.key()).arg(it.value());
         }
-        qDebug() << "Свободный член:" << constantTerm;
+        response += QString("Свободный член: %1\r\n").arg(constantTerm);
     } else {
-        qDebug() << "Ошибка при разборе уравнения!";
+        response = "Ошибка при разборе уравнения!\r\n";
     }
 
-    return "solver выполнен";
+    qDebug() << response; // Для отладки также выводим в консоль
+    return response;
 }
+

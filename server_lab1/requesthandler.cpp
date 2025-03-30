@@ -11,7 +11,7 @@ QString RequestHandler::handleRequest(const QString& request) {
     else if (parts.size() >= 3 && parts[0] == "LOGIN") {
         return handleLogin(parts); // Обработка авторизации
     }
-    else if (parts.size() >= 3 && parts[0] == "SOLVE") {
+    else if (parts.size() >= 2 && parts[0] == "SOLVE") {
         return handleSolve(request); // Обработка решения уравнений
     }
     else {
@@ -36,7 +36,8 @@ QString RequestHandler::handleLogin(const QStringList& parts) {
 // }
 QString RequestHandler::handleSolve(const QString& expression) {
     // int boolka = Solver::solver();//debug
-    QString debug;
-    debug = Solver::solver();
-    return debug;
+    // QString debug;
+    // debug = Solver::solver();
+    // return debug;
+    return Solver::solver();
 }
