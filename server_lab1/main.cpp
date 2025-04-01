@@ -1,9 +1,14 @@
-#include <QCoreApplication>
-#include "mytcpserver.h"
+#include "managerformss.h"
+#include "mainwindow.h"
+#include <QApplication>
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-    QCoreApplication a(argc, argv);
-    MyTcpServer myserv;
+    QApplication a(argc, argv);
+
+    MainWindow *mainWindow = new MainWindow();
+    ManagerFormss *manager = new ManagerFormss(nullptr, mainWindow);
+
+    manager->show();
     return a.exec();
 }
