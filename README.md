@@ -1,4 +1,3 @@
 # TMP_Project
 Проект моей команды по ТМП/ My team's project for TMP
-
-![](UseCase.drawio.png)
+Подробности[!https://github.com/Erisuuuuu/TMP_Project/wiki]
