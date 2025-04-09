@@ -6,3 +6,4 @@
 123
 ![[UseCase.drawio.svg]]
 ![[UseCase.drawio.png]]
+[![Test Embedding draw.io](UseCase.drawio.png)](https://app.diagrams.net/#Hphilip-gai/github-drawio/main/Test%20Embedding.drawio.svg)
