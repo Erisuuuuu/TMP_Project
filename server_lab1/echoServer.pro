@@ -19,7 +19,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     equationparser.cpp \
-    gaussianelimination.cpp \
     main.cpp \
     mytcpserver.cpp \
     requesthandler.cpp \
