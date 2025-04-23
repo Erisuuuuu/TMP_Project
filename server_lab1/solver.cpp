@@ -1,47 +1,53 @@
-#include "solver.h"
+#include "solver.h"  // Заголовочный файл класса Solver
 
-#include <QDebug>
-#include "equationparser.h"
+#include <QDebug>  // Для вывода отладочной информации в консоль
+#include "equationparser.h"  // Модуль для разбора строк уравнений в матрицу
+#include "gaussianelimination.h"  // Метод Гаусса для решения
 
-// QString Solver::solver() {
-//     QString equation = "2x + 3y+52z + 2x= 5.0";
-//     QString response = "";
-//     // Для хранения коэффициентов переменных: ключ – символ переменной, значение – суммарный коэффициент.
-//     QMap<QChar, double> varCoeffs;
-//     // Для хранения свободного члена (правой части уравнения).
-//     double constantTerm = 0.0;
-
-//     if (EquationParser::parseLinearEquation(equation, varCoeffs, constantTerm)) {
-//         response+= "Коэффициенты переменных:\n";
-//         for (auto it = varCoeffs.constBegin(); it != varCoeffs.constEnd(); ++it) {
-//             response+=  it.key() + ":" + it.value()+"\n";
-//         }
-//         response+= "Свободный член:" + constantTerm+"\n";
-//     } else {
-//         response+= "Ошибка при разборе уравнения!\n";
-//     }
-
-//     response;
-// }
+// Основной метод solver() — демонстрационная функция для тестирования
 QString Solver::solver() {
-    QString equation = "2x + 3y+52z + 2x= 5.0";
+    // Пример системы линейных уравнений, заданной в виде строк
+    QStringList equations = {
+        "2x + 3y + 52z + 2x = 5.0",  // Первое уравнение (обратите внимание: 2x встречается дважды)
+        "3x + y - z = 4.0"           // Второе уравнение
+    };
 
-    QMap<QChar, double> varCoeffs;
-    double constantTerm = 0.0;
+    QVector<QVector<double>> matrix; // Матрица коэффициентов
+    QVector<double> b;               // Вектор свободных членов
 
-    QString response; // Переменная для хранения результата
+    QString response; // Строка-ответ, которая будет возвращена и выведена
 
-    if (EquationParser::parseLinearEquation(equation, varCoeffs, constantTerm)) {
+    // Парсинг входных строк в матрицу коэффициентов и вектор b
+    if (EquationParser::parseLinearEquation(equations, matrix, b)) {
+        // Если парсинг успешен, выводим коэффициенты
         response += "Коэффициенты переменных:\r\n";
-        for (auto it = varCoeffs.constBegin(); it != varCoeffs.constEnd(); ++it) {
-            response += QString("%1 : %2\r\n").arg(it.key()).arg(it.value());
+        for (const QVector<double>& row : matrix) {
+            for (double coeff : row) {
+                response += QString("%1 ").arg(coeff);
+            }
+            response += "\r\n";
         }
-        response += QString("Свободный член: %1\r\n").arg(constantTerm);
+
+        // Выводим вектор свободных членов
+        response += "Свободные члены:\r\n";
+        for (double val : b) {
+            response += QString("%1 ").arg(val);
+        }
+        response += "\r\n";
+
+        // Решение системы методом Гаусса
+        QVector<double> solution = GaussianElimination::solve(matrix, b);
+
+        // Выводим найденные значения переменных
+        response += "Решение системы:\r\n";
+        for (double val : solution) {
+            response += QString("%1 ").arg(val);
+        }
     } else {
-        response = "Ошибка при разборе уравнения!\r\n";
+        // Если произошла ошибка при парсинге — сообщаем об этом
+        response = "Ошибка при разборе системы уравнений!\r\n";
     }
 
-    qDebug() << response; // Для отладки также выводим в консоль
-    return response;
+    qDebug() << response; // Отладочный вывод в консоль (удобно при тестировании)
+    return response;      // Возвращаем итоговый результат как строку
 }
-
