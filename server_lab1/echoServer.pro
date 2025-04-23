@@ -19,6 +19,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     equationparser.cpp \
+    gaussianelimination.cpp \
     main.cpp \
     mytcpserver.cpp \
     requesthandler.cpp \
@@ -31,6 +32,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     equationparser.h \
+    gaussianelimination.h \
     mytcpserver.h \
     requesthandler.h \
     solver.h
