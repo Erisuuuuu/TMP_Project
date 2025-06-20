@@ -1,0 +1,253 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36" version="27.0.6">
+  <diagram name="Страница — 1" id="s7-avFfAFgHU4evUxaAo">
+    <mxGraphModel dx="2365" dy="1670" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-1" value="MyTcpServer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="1120" width="370" height="210" as="geometry">
+            <mxRectangle x="230" y="70" width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-4" value="&lt;div&gt;- mytcpsocket: QList&lt;/div&gt;&lt;div&gt;- m_requestHandler: RequestHandler&lt;/div&gt;&lt;div&gt;- m_buffer: QHash&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-1" vertex="1">
+          <mxGeometry y="26" width="370" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-1" vertex="1">
+          <mxGeometry y="90" width="370" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-2" value="&lt;div&gt;+ MyTcpServer(parent: QObject* = nullptr)&lt;/div&gt;&lt;div&gt;+ startServer(port: uint16) : : bool&lt;/div&gt;&lt;div&gt;+ incoming Connection(socket Descriptor: intptr)&lt;/div&gt;&lt;div&gt;- onClientReadyRead()&lt;/div&gt;&lt;div&gt;- onClientDisconnected()&lt;/div&gt;&lt;div&gt;- send Json Response(client: QTcpSocket*, response: Jsonobject)&lt;/div&gt;&lt;div&gt;- sendErrorResponse(client: QTcpSocket*, message: QString)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-1" vertex="1">
+          <mxGeometry y="100" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.239;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-9" target="zdz95JsZJ5ni7-0ZMXoy-32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="1010" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="498" y="1020" />
+              <mxPoint x="750" y="1020" />
+              <mxPoint x="750" y="1010" />
+              <mxPoint x="750" y="1010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-9" value="AuthRegForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="190" y="1110" width="410" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-10" value="&lt;div&gt;- ui: Ui_AuthRegForm&lt;/div&gt;&lt;div&gt;- auth Attempts: in&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-9" vertex="1">
+          <mxGeometry y="26" width="410" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-9" vertex="1">
+          <mxGeometry y="70" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-12" value="&lt;div&gt;+ AuthRegForm(QWidget* parent = nullptr)&lt;/div&gt;&lt;div&gt;+ ~AuthRegForm()&lt;/div&gt;&lt;div&gt;# keyPressEvent(QKeyEvent* event)&lt;/div&gt;&lt;div&gt;# showEvent(QShowEvent* event)&lt;/div&gt;&lt;div&gt;- change_type_to_reg(bool is_reg)&lt;/div&gt;&lt;div&gt;- clear()&lt;/div&gt;&lt;div&gt;- generate Recovery Code() : QString&lt;/div&gt;&lt;div&gt;- send Recovery Code(const QString&amp;amp; email, const QString&amp;amp; code) : bool&lt;/div&gt;&lt;div&gt;+ on_pushButton Change_clicked()&lt;/div&gt;&lt;div&gt;+ on_pushButton Auth_clicked()&lt;/div&gt;&lt;div&gt;+ on_push Button Reg_clicked()&lt;/div&gt;&lt;div&gt;+ on_push Button Forgot Password_clicked()&lt;/div&gt;&lt;div&gt;+ auth_ok(QString)&lt;/div&gt;&lt;div&gt;+ recovery_ok()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-9" vertex="1">
+          <mxGeometry y="78" width="410" height="212" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-13" target="zdz95JsZJ5ni7-0ZMXoy-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-13" value="MainWindow" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1550" y="1125" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-14" value="&lt;div&gt;-Ui:: MainWindow *ui&lt;/div&gt;&lt;div&gt;--int rowcount&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-13" vertex="1">
+          <mxGeometry y="26" width="240" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-13" vertex="1">
+          <mxGeometry y="60" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-16" value="&lt;div&gt;+ MainWindow(QWidget* parent = nullptr)&lt;/div&gt;&lt;div&gt;+ ~MainWindow()&lt;/div&gt;&lt;div&gt;+ slot_show(QString)&lt;/div&gt;&lt;div&gt;# keyPressEvent(QKeyEvent* event)&lt;/div&gt;&lt;div&gt;- display Solution(const QJsonArray&amp;amp; solution)&lt;/div&gt;&lt;div&gt;- set Focus To First Empty Field()&lt;/div&gt;&lt;div&gt;+ on_push Button Add Ur av_clicked()&lt;/div&gt;&lt;div&gt;+ on_push Button Solve Ur av_clicked()&lt;/div&gt;&lt;div&gt;+ solution_ok()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-13" vertex="1">
+          <mxGeometry y="68" width="240" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-17" value="MenegerFormss" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="640" y="1510" width="370" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-18" value="&lt;div&gt;- curr_auth: AuthRegForm&lt;/div&gt;&lt;div&gt;- recovery_password: password recovery form&lt;/div&gt;&lt;div&gt;- curr_solution: Solution&lt;/div&gt;&lt;div&gt;- main_window: MainWindow&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-17" vertex="1">
+          <mxGeometry y="26" width="370" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-17" vertex="1">
+          <mxGeometry y="100" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-20" value="&lt;div&gt;+ Manager For mss(parent: QWidget*, mainWindow: MainWindow*)&lt;/div&gt;&lt;div&gt;+ ~Manager For mss()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-17" vertex="1">
+          <mxGeometry y="108" width="370" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.847;entryY=1.007;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-21" target="zdz95JsZJ5ni7-0ZMXoy-64" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="990" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="750" y="1050" />
+              <mxPoint x="551" y="1050" />
+              <mxPoint x="551" y="990" />
+              <mxPoint x="551" y="990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-21" value="PasswordRecoveryForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="675" y="1130" width="300" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-22" value="&lt;div&gt;- ui: Ui::password recovery form&lt;/div&gt;&lt;div&gt;- isCodeValid: bool&lt;/div&gt;&lt;div&gt;- recovery Code: QString&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-21" vertex="1">
+          <mxGeometry y="26" width="300" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-23" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-21" vertex="1">
+          <mxGeometry y="80" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-24" value="&lt;div&gt;+ password recovery form(QWidget* parent = nullptr)&lt;/div&gt;&lt;div&gt;+ ~password recovery form()&lt;/div&gt;&lt;div&gt;+ slot_show()&lt;/div&gt;&lt;div&gt;+ on_button Send Code_clicked()&lt;/div&gt;&lt;div&gt;+ on_button Confirm Code_clicked()&lt;/div&gt;&lt;div&gt;+ on_button Confirm New Password_clicked()&lt;/div&gt;&lt;div&gt;# keyPressEvent(QKeyEvent* event) : override&lt;/div&gt;&lt;div&gt;- set Focus To First Empty Field()&lt;/div&gt;&lt;div&gt;- move Focus To Next Empty Field()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-21" vertex="1">
+          <mxGeometry y="88" width="300" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-29" value="NetworkClient" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="685" y="790" width="270" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-31" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-29" vertex="1">
+          <mxGeometry y="26" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-32" value="&lt;div&gt;+ instance() : Network Client&amp;amp;&lt;/div&gt;&lt;div&gt;- Network Client(QObject* parent = nullptr)&lt;/div&gt;&lt;div&gt;+ authenticate(…)&lt;/div&gt;&lt;div&gt;+ register User(…)&lt;/div&gt;&lt;div&gt;+ send Password Reset Request(…)&lt;/div&gt;&lt;div&gt;+ validate Reset Code(…)&lt;/div&gt;&lt;div&gt;+ update Password(…)&lt;/div&gt;&lt;div&gt;+ checkEmailExists(…)&lt;/div&gt;&lt;div&gt;+ send Solution Request(…)&lt;/div&gt;&lt;div&gt;- handle Reply(QNetworkReply* reply)&lt;/div&gt;&lt;div&gt;+ network Error Occurred(const QString&amp;amp; error)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-29" vertex="1">
+          <mxGeometry y="34" width="270" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-41" value="ConfigLoader" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="701.4" y="30" width="247.2" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-42" value="&lt;div&gt;- m_config Path: QString&lt;/div&gt;&lt;div&gt;- m_config: Jsonobject&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rotation=0;" parent="zdz95JsZJ5ni7-0ZMXoy-41" vertex="1">
+          <mxGeometry y="26" width="247.2" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-43" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rotation=0;" parent="zdz95JsZJ5ni7-0ZMXoy-41" vertex="1">
+          <mxGeometry y="60" width="247.2" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-44" value="&lt;div&gt;+ ConfigLoader(config Path: QString)&lt;/div&gt;&lt;div&gt;+ load() : : bool&lt;/div&gt;&lt;div&gt;+ getString(key: QString) : : QString&lt;/div&gt;&lt;div&gt;+ getBool(key: String) : : bool&lt;/div&gt;&lt;div&gt;+ contains(key: QString) : : bool&lt;/div&gt;&lt;div&gt;+ get(key: QString) : : QJsonValue&lt;/div&gt;&lt;div&gt;+ getInt(key: String, defaultValue: int = 0) : : int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rotation=0;" parent="zdz95JsZJ5ni7-0ZMXoy-41" vertex="1">
+          <mxGeometry y="68" width="247.2" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-45" target="zdz95JsZJ5ni7-0ZMXoy-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-45" value="EqationParser" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1450" y="520" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-47" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-45" vertex="1">
+          <mxGeometry y="26" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-48" value="+ parse System(equations: QStringList, matrix: Vector&amp;gt;, constants: Vector, variables: QStringList, error: QString) : : bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-45" vertex="1">
+          <mxGeometry y="34" width="370" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-49" value="Gyssianelimination" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1445" y="320" width="380" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-51" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-49" vertex="1">
+          <mxGeometry y="26" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-52" value="+ solve(matrix: Vector&amp;gt;, constants: QVector, solution: QVector, steps: QStringList, error: QString, variables: QStringList) : : bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-49" vertex="1">
+          <mxGeometry y="34" width="380" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-57" value="RequestHandler" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1056" y="740" width="560" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-58" value="- m_db: DatabaseManager&amp;amp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-57" vertex="1">
+          <mxGeometry y="26" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-59" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-57" vertex="1">
+          <mxGeometry y="52" width="560" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-60" value="&lt;div&gt;+ RequestHandler(db: DatabaseManager&amp;amp;, parent: QObject* = nullptr)&lt;/div&gt;&lt;div&gt;+ handle Json Request(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;+handle Text Request(request: QString) : : QString&lt;/div&gt;&lt;div&gt;- process Register(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- process Login(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- process Password Reset Request(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- process Password Reset Confirm(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- process Password Reset Update(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- process Check Email(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- process Solve Equations(request: Jsonobject) : : Jsonobject&lt;/div&gt;&lt;div&gt;- handle Text Register(parts: QStringList) : : QString&lt;/div&gt;&lt;div&gt;- handle Text Login(parts: QStringList) : : QString&lt;/div&gt;&lt;div&gt;- handle Solve(expression: QString) : : QString&lt;/div&gt;&lt;div&gt;- validateRequest(request: QJsonObject, required Fields: QStringList, response: QJsonObject) : : bool&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-57" vertex="1">
+          <mxGeometry y="60" width="560" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-61" value="SmtpClient" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="170" y="700" width="450" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-62" value="&lt;div&gt;- m_host: QString&lt;/div&gt;&lt;div&gt;- m_port: int&lt;/div&gt;&lt;div&gt;- m_user: QString&lt;/div&gt;&lt;div&gt;- m_password: QString&lt;/div&gt;&lt;div&gt;- m_useSsl: bool&lt;/div&gt;&lt;div&gt;- socket: Sslsocket&lt;/div&gt;&lt;div&gt;- timeout Timer: QTimer&lt;/div&gt;&lt;div&gt;- state: State&lt;/div&gt;&lt;div&gt;- recipient: QString&lt;/div&gt;&lt;div&gt;- email Data: QString&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-61" vertex="1">
+          <mxGeometry y="26" width="450" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-63" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="zdz95JsZJ5ni7-0ZMXoy-61" vertex="1">
+          <mxGeometry y="180" width="450" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zdz95JsZJ5ni7-0ZMXoy-64" value="&lt;div&gt;+ SMTPClient(parent: QObject* = nullptr)&lt;/div&gt;&lt;div&gt;+ send Email(to: QString, subject: QString, body: QString)&lt;/div&gt;&lt;div&gt;+ configure(host: QString, port: int, user: QString, password: QString, useSsl: bool)&lt;/div&gt;&lt;div&gt;- sendCommand(command: QString)&lt;/div&gt;&lt;div&gt;- processResponse(response: QString)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="zdz95JsZJ5ni7-0ZMXoy-61" vertex="1">
+          <mxGeometry y="188" width="450" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-2" value="" style="endArrow=none;html=1;rounded=0;exitX=0.475;exitY=0.006;exitDx=0;exitDy=0;entryX=0.499;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;exitPerimeter=0;" parent="1" source="agIm_82LEx9gyG26exwt-4" target="zdz95JsZJ5ni7-0ZMXoy-44" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="825" y="360" as="sourcePoint" />
+            <mxPoint x="840" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.48;exitY=1.009;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="agIm_82LEx9gyG26exwt-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="831.1399999999999" y="659.996" as="sourcePoint" />
+            <mxPoint x="827" y="790.42" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="826" y="660" />
+              <mxPoint x="827" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.272;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-9" target="zdz95JsZJ5ni7-0ZMXoy-64" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.499;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-21" target="zdz95JsZJ5ni7-0ZMXoy-32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="1130" />
+              <mxPoint x="820" y="1060" />
+              <mxPoint x="820" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.004;entryY=0.627;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-64" target="zdz95JsZJ5ni7-0ZMXoy-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.994;entryY=0.257;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-57" target="agIm_82LEx9gyG26exwt-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="616.4499999999998" y="246.27999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.489;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-60" target="zdz95JsZJ5ni7-0ZMXoy-32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="955" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-48" target="zdz95JsZJ5ni7-0ZMXoy-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.003;entryY=0.889;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-1" target="zdz95JsZJ5ni7-0ZMXoy-60" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.642;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;exitX=0.363;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-13" target="zdz95JsZJ5ni7-0ZMXoy-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1640" y="1120" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1636" y="1125" />
+              <mxPoint x="1636" y="935" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=diamondThin;startFill=0;strokeWidth=2;endFill=0;endSize=10;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-18" target="zdz95JsZJ5ni7-0ZMXoy-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=diamondThin;startFill=0;strokeWidth=2;endFill=0;endSize=10;entryX=0.499;entryY=0.993;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-17" target="zdz95JsZJ5ni7-0ZMXoy-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="1360" />
+              <mxPoint x="825" y="1360" />
+            </Array>
+            <mxPoint x="825" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=diamondThin;startFill=0;strokeWidth=2;endFill=0;endSize=10;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1550" y="1345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_S0V7ynobsPPyu_akBcA-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.399;entryY=-0.009;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;startFill=0;strokeWidth=2;" parent="1" source="zdz95JsZJ5ni7-0ZMXoy-49" target="zdz95JsZJ5ni7-0ZMXoy-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="agIm_82LEx9gyG26exwt-4" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;DataBaseMeneger&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="620" y="360" width="430" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="agIm_82LEx9gyG26exwt-5" value="&lt;div&gt;- QSqlDatabase m_db&lt;/div&gt;&lt;div&gt;- Mutex m_mutex&lt;/div&gt;&lt;div&gt;- QString m_lastError&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="agIm_82LEx9gyG26exwt-4" vertex="1">
+          <mxGeometry y="26" width="430" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="agIm_82LEx9gyG26exwt-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="agIm_82LEx9gyG26exwt-4" vertex="1">
+          <mxGeometry y="80" width="430" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="agIm_82LEx9gyG26exwt-7" value="&lt;div&gt;+ instance() : Database Manager&amp;amp;&lt;/div&gt;&lt;div&gt;+ Database Manager()&lt;/div&gt;&lt;div&gt;+ Database Manager()&lt;/div&gt;&lt;div&gt;+ connect To Database(path: QString) : : bool&lt;/div&gt;&lt;div&gt;+ registerUser(login: QString, password: QString, email: QString) : : bool&lt;/div&gt;&lt;div&gt;+ authenticateUser(login: QString, password: QString) : : bool&lt;/div&gt;&lt;div&gt;+ get Email By Login(login: QString) : : QString&lt;/div&gt;&lt;div&gt;+ create Password Reset Code(login Or Email: QString, code: QString) : : bool&lt;/div&gt;&lt;div&gt;+ validate Reset Code(login Or Email: QString, code: QString) : : bool&lt;/div&gt;&lt;div&gt;+ update Password(loginOrEmail: QString, newPassword: QString) : : bool&lt;/div&gt;&lt;div&gt;+ emailExists(email: QString) : : bool&lt;/div&gt;&lt;div&gt;+ delete Reset Code(login Or Email: QString, code: QString) : : bool&lt;/div&gt;&lt;div&gt;+ lastError() : : QString&lt;/div&gt;&lt;div&gt;- hashPassword(password: QString) : : QString&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="agIm_82LEx9gyG26exwt-4" vertex="1">
+          <mxGeometry y="88" width="430" height="212" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
